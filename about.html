@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Fashion Market</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        .navbar {
+            transition: all 0.3s;
+        }
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .hero-about {
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+            padding: 120px 0 80px;
+            color: white;
+        }
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: #6366F1;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .timeline-content {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: calc(50% - 40px);
+        }
+        .timeline-item:nth-child(odd) .timeline-content {
+            float: left;
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            float: right;
+        }
+        .timeline-year {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: #6366F1;
+            border-radius: 50%;
+            top: 0;
+            left: 50%;
+            margin-left: -35px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 40px;
+            }
+            .timeline-content {
+                width: calc(100% - 80px);
+                float: right !important;
+            }
+            .timeline-year {
+                left: 40px;
+                margin-left: -35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (sama seperti home page) -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Fashion Market</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="display-4 fw-bold mb-4">Our Story</h1>
+                    <p class="lead">Fashion Market was born from a passion for style and a vision to make quality fashion accessible to everyone.</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="img/fillsup.jpg" alt="Our Store" class="img-fluid rounded-3 shadow-lg h-50 w-50">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Our Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item clearfix" data-aos="fade-up">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h4>The Beginning</h4>
+                        <p>Started as a small studio in Bandung with a dream to revolutionize fashion retail.</p>
+                    </div>
+                </div>
+                <div class="timeline-item clearfix" data-aos="fade-up">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h4>Going Digital</h4>
+                        <p>Launched our e-commerce platform, bringing fashion to customers nationwide.</p>
+                    </div>
+                </div>
+                <div class="timeline-item clearfix" data-aos="fade-up">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h4>Expansion</h4>
+                        <p>Opened 10 new stores across major campus in Indonesia.</p>
+                    </div>
+                </div>
+                <div class="timeline-item clearfix" data-aos="fade-up">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h4>Today</h4>
+                        <p>A leading fashion retailer with over 50 campus and a thriving online presence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5 bg-light" id="team">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Meet Our Team</h2>
+            <div class="row">
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="team-member">
+                        <img src="img/taqwim.jpg" alt="Team Member 1">
+                        <h4>Taqwims</h4>
+                        <p class="text-muted">CEO & Founder</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-member">
+                        <img src="img/darmawan.jpg" alt="Team Member 2">
+                        <h4>Darmawan</h4>
+                        <p class="text-muted">Creative Director</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-member">
+                        <img src="img/mike.jpg" alt="Team Member 3">
+                        <h4>Mike</h4>
+                        <p class="text-muted">Head of Design</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-member">
+                        <img src="img/sarah.png" alt="Team Member 4">
+                        <h4>Sarah Lee</h4>
+                        <p class="text-muted">Marketing Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Our Values</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-heart fa-3x text-primary mb-3"></i>
+                            <h4>Passion for Fashion</h4>
+                            <p class="text-muted">We love what we do and it shows in every piece we select.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-star fa-3x text-primary mb-3"></i>
+                            <h4>Quality First</h4>
+                            <p class="text-muted">We never compromise on the quality of our products.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                            <h4>Customer Focus</h4>
+                            <p class="text-muted">Our customers are at the heart of everything we do.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (sama seperti home page) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2024 FillsUP. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
